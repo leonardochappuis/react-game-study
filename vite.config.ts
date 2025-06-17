@@ -20,6 +20,7 @@ export default defineConfig({
     globals: true,
     setupFiles: ["./src/test/setupTests.ts"],
     include: ["src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
+    exclude: ["src/test/e2e/**"], // ← keep Playwright specs out
     reporter: "verbose",
     coverage: {
       provider: "istanbul",
