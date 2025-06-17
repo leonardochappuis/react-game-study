@@ -2,7 +2,7 @@
 import { test, expect } from "@playwright/test";
 
 test("heading is vertically & horizontally centered", async ({ page }) => {
-  await page.goto("http://localhost:5173/"); // dev server or built app
+  await page.goto("http://localhost:5173/");
 
   const heading = page.getByRole("heading", { name: "Welcome Home!" });
   const box = await heading.boundingBox();
