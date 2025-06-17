@@ -1,5 +1,5 @@
 // vite.config.ts
-import { defineConfig } from "vite";
+import { defineConfig } from "vitest/config";
 import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react-swc";
 import { tanstackRouter } from "@tanstack/router-plugin/vite";
@@ -21,7 +21,7 @@ export default defineConfig({
     setupFiles: ["./src/test/setupTests.ts"],
     include: ["src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
     exclude: ["src/test/e2e/**"], // ← keep Playwright specs out
-    reporter: "verbose",
+    reporters: ["verbose"],
     coverage: {
       provider: "istanbul",
       reporter: ["text", "json", "html"],
